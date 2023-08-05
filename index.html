@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Personal Portfolio</title>
+        <meta name="description" content="Software developer personal portfolio,Vince Dority">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!--Create a div to hold the nav section-->
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Frontend Developer <span>Portfolio</span></a>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="buttons">
+                    <a href="#" class="login">Log in</a>
+                    <a href="#" class="btn">Register</a>
+                </div>
+            </nav>
+            <div class="content">
+                <header>
+                <h2>Hello<span>,</span><br>My name is Vince Dority</h2>
+                <p>I am a Front End developer aiming to develop modern, responsive,
+                    and aesthetically appealing web applications.
+                </p>
+            </div>
+        </header>
+        <!--Add content to main section-->
+        <div class="main-container">
+            <main class="main-content">
+                <!--create Hero section for languange images-->
+                <section class="main">
+                    <div class ="main-text">
+                        <h1>Welcome to my portfolio<span>.</span></h1>
+                    </div>
+                </section>
+                <div class ="hero-image">
+                    <div id="react" class="cube"></div>
+                    <div id="javascript" class="cube"></div>
+                    <div id="html" class="cube"></div>
+                    <div id="css" class="cube"></div>
+                </div>
+                 <!--Project card section-->
+                 <div class="projects">
+                    <section class="projectcard" id="form-validation">
+                        <h2>Form validation</h2>
+                        <div class="project-img">
+                            <img src="./images/projects-snapshot/FormValidationsnapshot.png" alt="Image of form validation project">
+                        </div>
+                    </section>
+                    <section class="projectcard" id="signup-login">
+                        <h2>Signup and Login form</h2>
+                        <img src="./images/projects-snapshot/signup-loginsnapshot.png">
+                    </section>
+                </div>
+                <div class="link"><a href="#" class="hire">Contact Me</a>
+                </div>
+            </main>
+        </div>
+        </div>
+        
+        <script src="./script.js" async defer></script>
+    </body>
+</html>
