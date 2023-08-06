@@ -112,8 +112,8 @@ a{
     height: 350px;
     display:flex;
     margin-bottom: 100px;
-    right:-40vw;
-    bottom:30vh;
+    right: -60%;
+    bottom:30%;
     
     
 }
@@ -183,7 +183,7 @@ a{
     height:100px;
 }
 #javascript::before{
-    background-color: #03a9f4;
+    background-color: #49c0f7;
 }
 #javascript::after{
     background-color: #49c0f7;
@@ -198,28 +198,156 @@ a{
     height:100px;
 }
 #react::before{
-    background-color:#03a9f4;
+    background-color:#49c0f7;
     
 }
 #react::after{
     background: #49c0f7;
 }
-.projects{
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    background-color: #000;
+#welcome-msg{
+    transform: translate(28vw,15vh);
+    animation: shadow 5s infinite ease-in-out;
+}
+p{
+    font-weight: 900;
+}
+main{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:40vw;
-    transform:translateY(-14vh);
+    flex-wrap: wrap;
+    border-radius:10%;   
 }
-.projectcard{
-    text-align: center;
+.btn-git{
+    display:flex;
+    background-color: #49c0f7;
+    margin:20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border:none;
+    background-image: url("./images/projects-snapshot/github-mark.png");
+    background-size: cover;
+    background-position: center;
+    width:5rem;
+    height:5rem;
+   
+}
+.btn-git:hover{
+    box-shadow: 0 0 1rem #bce2f4;
+    animation: rollover .20s ease ;
+}
+.hire a{
+    
+    text-decoration: none;
+    
+}
+.projects h2{
+    padding-top:1rem ;
+    padding-bottom:1rem;
+}
+.projects{
+    display:flex;
+    flex-wrap: wrap;
+    /* background-color: #000; */
+    justify-content: center;
+    align-items: center;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    width:100%;
+    gap:5rem;
+    transform:translateY(-15rem);
+    border-radius:10%;
+    box-shadow: 0 0 1rem #49c0f7;
 
 }
-.projects img{
-    transform: translate(4rem.4rem);
-    width: 40vw;
-    padding-bottom:20px;
+.projectcard{
+    box-shadow: 0 0 1rem #49c0f7;
+    text-align: center;
+    border-radius:10%;
+
 }
+.projects img {
+    transform: translate(4rem.4rem);
+    border-radius:10%;
+    width: 30vw;
+    padding-bottom:20px;
+    padding-top:1rem;
+    margin:0 1rem;
+    flex-direction: column;
+    
+}
+.projects img ,.projectcard:hover{
+    box-shadow: 0 0 5rem #49c0f7;
+    border: none;
+
+    
+/* }
+#budget-tracker{
+ width:50vw;
+
+ height:50vh;    */
+}
+@keyframes shadow{
+    0%{
+        text-shadow:0 0 .1rem #64c0eb;
+    }
+    100%{
+        text-shadow: 0rem 0rem .5rem #8bd5f7;
+    }
+}
+@keyframes rollover{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero-image{
+        display: flex;
+        position:sticky;
+        width: 100%;
+        height: 50vh;
+        justify-content: center;
+        transform: translate(-4rem,-5rem);
+        z-index: -6;
+        opacity:20%;
+        
+    }
+    .cube {
+        width: 15%;
+    }
+    #html{
+        left: 30%;
+        bottom: 20%;
+        height: 15%;
+      }
+      #css {
+          left: 70%;
+          bottom: 70%;
+          height: 15%;
+      }
+      #javascript{
+          left: 80%;
+          bottom:30%;
+          height: 15%;
+      }
+      #react{
+          left: 25%;
+          bottom: 60%;
+          height: 15%;
+      }
+      #welcome-msg{
+        position:relative;
+        right:5rem;
+      }
+      .btn-git{
+        width:30px;
+        height:30px;
+        border-radius: 100%;
+      }
+
+  }

@@ -22,26 +22,33 @@
                     <li><a href="#">Education</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <div class="buttons">
-                    <a href="#" class="login">Log in</a>
-                    <a href="#" class="btn">Register</a>
-                </div>
             </nav>
             <div class="content">
                 <header>
-                <h2>Hello<span>,</span><br>My name is Vince Dority</h2>
+                <h2><span>H</span>ello,<br>My name is Vince Dority</h2>
                 <p>I am a Front End developer aiming to develop modern, responsive,
-                    and aesthetically appealing web applications.
+                    and aesthetically appealing web applications<span>.</span>
                 </p>
+            </div>
+            <h1 id="welcome-msg">Welcome to my portfolio<span>.</span></h1>
+             <!--create Hero section for languange images-->
+             <section class="main-hero">
+                <div class ="main-text">
+                </div>
+            </section>
+            <div class ="hero-image">
+                <div id="react" class="cube"></div>
+                <div id="javascript" class="cube"></div>
+                <div id="html" class="cube"></div>
+                <div id="css" class="cube"></div>
             </div>
         </header>
         <!--Add content to main section-->
         <div class="main-container">
             <main class="main-content">
                 <!--create Hero section for languange images-->
-                <section class="main">
+                <!-- <section class="main-hero">
                     <div class ="main-text">
-                        <h1>Welcome to my portfolio<span>.</span></h1>
                     </div>
                 </section>
                 <div class ="hero-image">
@@ -49,19 +56,33 @@
                     <div id="javascript" class="cube"></div>
                     <div id="html" class="cube"></div>
                     <div id="css" class="cube"></div>
-                </div>
+                </div> -->
                  <!--Project card section-->
                  <div class="projects">
                     <section class="projectcard" id="form-validation">
                         <h2>Form validation</h2>
                         <div class="project-img">
-                            <img src="./images/projects-snapshot/FormValidationsnapshot.png" alt="Image of form validation project">
+                            <img src="./images/projects-snapshot/FormValidationsnapshot.png" alt="Image of form validation project"id="form-validation">
                         </div>
+                        
+                        <a href="https://github.com/vidoh89/logIn-validationForm.git"><button type="button" class="btn-git"></button></a>
                     </section>
                     <section class="projectcard" id="signup-login">
                         <h2>Signup and Login form</h2>
-                        <img src="./images/projects-snapshot/signup-loginsnapshot.png">
+                        <img src="./images/projects-snapshot/signup-loginsnapshot.png"  id="signup-login">
+                        <a href="https://github.com/vidoh89/SignupandLoginForm.git"><button type="button" class="btn-git"></button></a>
                     </section>
+                    <section class="projectcard" >
+                        <h2>Budget Tracker</h2>
+                        <img src="./images/projects-snapshot/budget-trackingsnapshot.png" id="budget-tracker">
+                       <a href="https://github.com/vidoh89/BudgetTracker.git"><button type="button" class="btn-git"></button></a>
+                    </section>
+                    <section class="projectcard" >
+                        <h2>Fast Food app</h2>
+                        <img src="./images/projects-snapshot/food-appsnapshot.png" id="fastfood-app">
+                        <a href="https://github.com/vidoh89/food-app.git"><button type="button" class="btn-git"></button></a>
+                    </section>
+                    
                 </div>
                 <div class="link"><a href="#" class="hire">Contact Me</a>
                 </div>
