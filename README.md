@@ -1,2 +1,2 @@
 # personalportfolio
-Personal portfolio which contains completed project 
+Personal portfolio which contains ongoing project 
