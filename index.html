@@ -6,22 +6,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Personal Portfolio</title>
         <meta name="description" content="Software developer personal portfolio,Vince Dority">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <!--Create a div to hold the nav section-->
         <div class="container">
-            <nav>
+            <nav class="navbar">    
                 <div class="logo">
                     <a href="#">Frontend Developer <span>Portfolio</span></a>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Contact</a></li>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                 </ul>
+
+                <!-- Hamburger container -->
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
             </nav>
             <div class="content">
                 <header>
@@ -58,7 +65,7 @@
                     <div id="css" class="cube"></div>
                 </div> -->
                  <!--Project card section-->
-                 <div class="projects">
+                 <!-- <div class="projects"> -->
                     
                     <section class="projectcard" id="form-validation">
                         <h2>Form validation</h2>
@@ -98,7 +105,7 @@
                         </a>
                     </div>
                     
-                </div>
+                <!-- </div> -->
                 <h2 id="form-title">Contact Form</h2>
                 <section id="contact-form">
                    
@@ -110,7 +117,7 @@
                         <label for="email">Email</label><br>
                         <input type="email" name="email" placeholder="Email Address" required><br>
                         <label for="msg-area">Message</label>
-                        <input type="text" name="msg-area"  id="msg-area">
+                        <textarea name="message" id="msg-area"></textarea>
                         <button type="submit" class="hire">Contact Me</button>
                    </form> 
                    </section>

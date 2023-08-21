@@ -11,8 +11,9 @@ body{
     background-color: #001925;
 }
 .container{
+    display: block;
     max-width:100%;
-    min-height:100vh;
+    min-height:100%;
     /* background-image: url(./back.jpg); */
     background-position: center;
     background-size: cover;
@@ -36,7 +37,7 @@ span{
 nav ul li{
     display:inline-block;
     list-style:none;
-    margin:10px 15px;
+    margin:10px 5px;
 }
 nav ul li a{
     color: #fff;
@@ -48,6 +49,29 @@ nav ul li a:hover{
     color:#49c0f7;
     font-size: larger;
     transition: all .50s ease-in-out;
+}
+/* navbar */
+
+.navbar{
+    min-height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/* Hamburger menu */
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+.bar{
+    display: block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    -webkit-transition:all 0.5s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color: white;
 }
 img:hover{
     transform: scale(1.3);
@@ -64,7 +88,7 @@ img:hover{
     font-size: 60px;
 }
 .content p{
-    margin-top:10px;
+    margin-top:5px;
     line-height:25px;
 }
 a{
@@ -74,7 +98,7 @@ a{
     font-weight:600;
 }
 .link{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .hire{
     color:#fff;
@@ -109,10 +133,10 @@ a{
 /* Add lang logo boxes */
 .hero-image{
     position:relative;
-    width:50%;
-    height: 350px;
+    max-width:50%;
+    min-height: 350px;
     display:flex;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     right: -60%;
     bottom:30%;
     
@@ -120,7 +144,7 @@ a{
 }
 .cube{
     position: absolute;
-    width:80px;
+    max-width:80px;
     transform: rotate(-25deg)skew(25deg);
     
     
@@ -181,7 +205,7 @@ a{
     background-size: cover;
     background-color: #03a9f4;
     box-shadow: -40px 40px 20px rgba(211, 219, 222, 0.15);
-    height:100px;
+    max-height:100px;
 }
 #javascript::before{
     background-color: #49c0f7;
@@ -256,21 +280,11 @@ main{
     right:-25rem;
     
 }
-.projects{
-    display:inline-flex;
-    flex-wrap: wrap;
-    /* background-color: #000; */
-    padding-top:1rem;
-    width:100%;
-    max-width: 100%;
-    gap:1rem;
-    border-radius:1%;
-    box-shadow: 0 0 1rem #49c0f7;
 
-}
 .projectcard{
     display: inline-flex;
     box-shadow: 0 0 1rem #49c0f7;
+    flex-wrap: wrap;
     text-align: center;
     border-radius:10%;
     justify-content: center;
@@ -278,18 +292,17 @@ main{
     max-width: 100%;
 
 }
-.projects img {
-    /* transform: translate(4rem.4rem); */
+.projectcard img {
     border-radius:10%;
-    width: 50%;
-    height:50%;
+    max-width: 50%;
+    min-height:50%;
     padding-bottom:20px;
     padding-top:1rem;
-    margin:0 4rem;
-    flex-direction: column;
+    
+    
     
 }
-.projects ,img ,.projectcard:hover{
+.projectcard img:hover{
     box-shadow: 0 0 5rem #49c0f7;
     border: none;
 
@@ -307,40 +320,37 @@ main{
 }
 #edu-section h2{
     position: relative;
-    bottom:-.50rem;
+    bottom:-2rem;
     right:-5rem; 
     display: block;
     text-decoration:  underline #49c0f7;
+    margin:5vw;
     /* transform: translate(18rem);     */
 
 }
 .edu-items img{
-    /* position:relative; 
-    width:5vw; 
-    height:10vh;
-    right:2.5rem;   */
+    display: block;
     justify-content: space-evenly;
     align-items: center;
-    
-   
-    
-
+    background-color: #49c0f76d;
     
 }
 #contact-form{
     display: inline-flex;
     background-color: #001925;
     font-size:xx-large;
-    width:auto;
-    height:auto;
+    max-width:80vw;
+    min-height:60vh;
     white-space: wrap;
     justify-content: center;
     align-items: center;
     box-shadow:0 0 1rem #49c0f7;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 #msg-area{
     padding:5rem;
+    border-radius: 2rem;
+    margin:1rem;
  
 }
 .link{
@@ -363,17 +373,13 @@ input{
     
     
 }
-#contact-form{
-    display: inline-flex;
-    justify-content: flex-start;
-    width:auto;
-    height: auto;
-}
+
 #contact-form button{
    display: inline-flex;
     border: none;
     border-radius:1rem;
-    margin-top:1rem;
+    margin-bottom:1rem;
+
 
 }
 @keyframes shadow{
@@ -392,6 +398,41 @@ input{
         transform: rotate(360deg);
     }
 }
+@media(max-width:799px){
+
+.hamburger{
+    display: block;
+    position: relative;
+    bottom:2.5vh;
+    margin: auto -1rem;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity:0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px)rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px)rotate(-45deg);
+}
+.nav-menu{
+    position: fixed;
+    left: -100%;
+    top:70px;
+    gap:0;
+    flex-direction: column;
+    transition: 0.3s;
+}
+.nav-menu.active{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    left:85%;
+    margin: auto -5rem;
+}
+}
+
+
 @media only screen and (max-width: 799px) {
     .hero-image{
         display:inline-flex;
@@ -407,33 +448,34 @@ input{
     .cube {
         width: 15%;
         position:relative;
-        max-width: 100%;
+        
         
     }
     #html{
-        left: -30%;
+        left: -1%;
         bottom: -60%;
-        padding:15%;
+        padding:25%;
         max-width: 100%;
+
         
       }
       #css {
 
-          left: -20%;
+          left: 50%;
           bottom: -95%;
-          padding:15%;
+          padding:25%;
           max-width: 100%;
       }
       #javascript{
-          left: 50%;
+          left: 90%;
           bottom:-30%;
-          padding:15%;
+          padding:2%;
           max-width: 100%;
       }
       #react{
-          left: 100%;
-          bottom: -70%;
-          padding:15%;
+          left: 25rem;
+          bottom: -60%;
+          padding:25%;
           max-width: 100%;
       }
       #welcome-msg{
@@ -453,33 +495,36 @@ input{
         position: relative;
         right: 7rem;
         text-align: center;
-      }
-      .projects{
-       display:inline-flex;
-       justify-content: center;
-       align-items: center;
-       position:relative;
-       margin-left: -14rem;
       } 
-      .projectcard h2{
+      .projectcard>h2{
         display: block;
         font-size: x-large;
+        padding:1rem;
 
         
         
       }
       .projectcard{
         display: inline-block;
+        position: relative;
         width:100%;
         height:100%;
         justify-content: center;
         align-items: center;
+        margin:auto;
+        margin-top:10rem;
+        left:-3rem;
+
 
      } 
      .projectcard>img{
+        align-items: center;
+        justify-content: center;
         margin:auto;
-        width: 100vw;
-        height:100%;
+        max-width:80%;
+        min-height: 100%;
+        border-radius:2rem;
+        margin:1remauto;
         
         
         
@@ -495,7 +540,7 @@ input{
         display: inline-flex;
         flex-direction: row;
         justify-content: flex-start;
-        gap:3rem;
+        gap:1rem;
         
      }
      /* #edu-section h2{
@@ -504,54 +549,71 @@ input{
      } */
      #edu-section img{
         display: inline-flex;
-        width:50px;
-        height:70px;
+        max-width:80px;
+        min-height:80px;
         margin: auto;
+        border-radius: 3rem;
+        padding:.5rem;
         align-items: center;
-        transform: translate(-45vw,8vh);
+        transform: translate(-35vw,8vh);
          
      }
      #edu-section>h2{
-        transform: translate(5rem,-4rem);
-        margin-bottom:2rem;
-        margin-top:2rem;
+        display:flex;
+        text-align: center;
+        transform: translate(3rem,-4rem);
+        margin-bottom:3rem;
+        margin-top:4rem;
      }
     
      #contact-form{
         display:inline-flex;
-        padding: 1rem;
-        transform: translate(-4rem);
+        padding:10rem;
         border: none;
+        max-width: 50vw;
+        justify-content:flex-start;
+        align-items: flex-start;
         
         
      }
      #contact-form ,label{
         display:inline-flex;
         text-align: start;
-        padding-top:2rem;
+        padding-top:1rem;
         font-weight: 600;
         font-size: large;
-        transform: translate(-2rem);
+        transform: translate(-5rem);
         
        
         
      }
      #form-title{
-        transform: translate(-8rem);
+        position: relative;
+        transform: translate(-5rem);
      }
      #msg-area{
         display: block;
-        transform: translate(-5rem);
+        position:relative;
+       position:relative;
+       left:-6rem;
+       max-width: 50vw;
+       border-radius: 2rem;
+        
         
      }
      
      #contact-form input{
-        width:50%;
-        height:20px;
+        transform: translate(-5rem);
+        max-width:80%;
+        min-height:30px;
         margin:auto;
         font-size: medium;
         text-align:start;
     
+     }
+     .hire{
+        position: relative;
+        left: -5rem;
      }
 
   }
@@ -559,8 +621,8 @@ input{
     .hero-image{
         display:inline-flex; 
         position:sticky;
-        width: 100%;
-        height: 50vh;
+        max-width: 50vw;
+        
         justify-content: center; 
         align-items: center;
          /* transform: translate(-4rem,-5rem);  */
@@ -568,139 +630,119 @@ input{
         opacity:20%;
         
     }
-    .cube {
-        width: 15%;
-    }
+    
     #html{
-        padding: 5rem;
-        left: 50%;
+        padding: 7rem;
+        left: 50vw;
         bottom: -20%;
 
     
 
       }
       #css {
-        padding:5rem;
-          left:30%;
+        padding:7rem;
+          left:30vw;
           bottom: -60%;
          
       }
       #javascript{
-          padding:5rem;
-          left: 10%;
-          bottom:-20%;
+          padding:7rem;
+          left: 5vw;
+          bottom:-15%;
           
       }
       #react{
-        padding:5rem;
-          left: 25%;
+        padding:7rem;
+          left: 25vw;
           bottom: 90px;
           
       }
-      #welcome-msg{
-       display: inline-block;
-       
-      }
       .btn-git{
+        display:block;
         width:30px;
         height:30px;
         border-radius: 100%;
       }
       #welcome-msg{
-        font-size: larger;
+        font-size: 2rem;
         position: relative;
         right: 7rem;
-        text-align: center;
+        text-align: start;
+        height:10px;
       }
-      .projects{
-        display:inline-flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width:100%;
-        height:100;
-        margin:auto;
-      }
-      .projectcard h2{
+      
+      .projectcard>h2{
         display: block;
         font-size: x-large;
+        padding:.5rem
         
         
       }
      .projectcard{
         display: inline-block;
-        width:100%;
-        height:100%;
-
+        max-width:50vw;
+        min-height:50vh;
+        position: relative;
+        left: 15vw;
+        align-items: center;
      }
      .projectcard>img{
-        margin:auto;
-        width:50vw;
-        height:100%;
-        
-        
+       max-width:40vw;
+       min-height:60vh;
+       border-radius: 2rem;
+       gap:.2rem;    
      }
-     /* #fastfood-app{
-        display: inline-flex;
-        background-size: cover;
-        width:100%;
-        height:100%;
-        
-     } */
+   
      #edu-section{
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap:10rem;
+        display:inline-flex;
+        gap:1rem;
+        margin-top:5vh; 
+        transform: translate(3vw);
      }
-     /* #edu-section h2{
-        position: relative;
-        right:5vw;
-     } */
+
      #edu-section img{
-        display: inline-flex;
-        flex-direction: row;
-        width:50px;
+        position:relative;
+        width:70px;
         height:70px;
-        margin: auto;
-        transform: translate(-10vw,5vh);
+        border-radius:100%; 
+        padding:.2rem;
+        margin-top:2vh;
+
+
         
      }
      #edu-section>h2{
-        transform: translate(20rem,-5rem);
+        transform: translate(20vw,-6rem);
         margin-bottom:2rem;
         margin-top:2rem;
-        
-       
-        
-     }
+        }
      img:hover{
         transform: scale(1.1);
      }
      #contact-form{
         display:inline-flex;
-        margin-bottom:1rem ;
+        margin-bottom:.1rem ;
+        transform: translate(15vw);
          
      }
      #contact-form>label{
         padding-top: 20rem;
         font-weight: 600;
         font-size: large;
-        
      }
      #contact-form >input{
-        width:100%;
-        height:20px;
+        max-width:100vw;
+        min-height:50px;
         font-size: medium;
         text-align: start;
+        padding: 1rem;
     
      }
      #msg-area{
         display: block;
+        max-width:50vw;
+        min-height: 10vh;
      }
-     .hire{
-        margin:1rem;
-     }
-
+     
   }
   
