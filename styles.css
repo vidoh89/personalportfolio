@@ -290,12 +290,19 @@ header p{
     padding:1rem;
 }
 .hire{
+    font-weight:500;
     background-color: var(--light-blue);
     color:var(--font-clr-white);
     padding:.2rem;
     border:none;
     border-radius: 2rem;
     text-align: center;
+    cursor: pointer;
+}
+.hire:hover{
+    background-color: var(--font-clr-white);
+    color:var(--bg-dark-blue);
+    transition: all 0.3s ease-in-out;
 }
 
 @media(min-width:475px){
@@ -325,6 +332,7 @@ header p{
 @media(min-width:768px){
     .container{
         max-width:768px;
+        
     }
     .hamburger{
         opacity:0;
@@ -345,20 +353,124 @@ header p{
 @media(min-width:1024px){
     .container{
         max-width: 1024px;
-        justify-content: center;
-        align-items: center;
+        
     }
-    .nav-menu{
-        left:45vw;
+    .main-container{
+        margin-left:10vw;
     }
+        
+    .nav-link{
+        position: relative;
+        font-weight:400;
+        font-size:larger;
+    }
+
+    .nav-item{
+        font-size:1rem;
+        position: relative;
+        left: -20vw;
+    }
+    .logo a{
+    font-size: 3rem;
+    font-weight: 900;
+}
+header h2{
+    margin-top:1rem;
+    font-size:2.5rem;
+}
+header p{
+    font-size:1.2rem;
+}
+#welcome-msg{
+    position: relative;
+    left:35vw;
+    bottom:-10rem;
+    font-size:xx-large;
+}
+.hero-image{
+    position:relative;
+    max-width:80%;
+    min-height: 20rem;
+    display:flex;
+    right: -85%;
+    opacity: 100%;   
+}
+.projectcard{
+    display: block;
+}
+.projectcard img{
+    max-width: 70%;
+    box-shadow:0 0 20px #03a9f4;
+}
+.projectcard h2{
+    font-size: larger;
+   
+}
+.btn-git{
+    width:40px;
+    height:40px;
+}
+#edu-section h2{
+    font-size: larger;
+}
+#edu-section img{
+    width:70px;
+    height:70px;
+}
+#form-title {
+    font-size: larger;
+}
+#contact-form{
+    display: block;
+    max-width: 60%;
+    margin-left: 20vw;
+
+}
+#contact-form label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#contact-form input{
+    padding:.20rem;
+    font-size: medium;
+}
+.hire{
+    padding:1rem;
+    margin-top: .1rem;
+    font-weight: 500;
+}
 }
 @media(min-width:1280px){
     .container{
         max-width: 1280px;
+    
+
     }
+    
+    
+    .nav-item{
+        position: relative;
+        left:-10vw;
+
+    }
+    #contact-form{
+        margin-right:20vw;
+        padding:5rem;
+        padding-bottom:1px;
+    }
+    
 }
 @media(min-width:1563px){
     .container{
         max-width: 1536;
+    }
+    .main-container{
+        margin-left:20vw;
+    }
+    .nav-item{
+        left:10vw;
+    }
+    .hero-image{
+        left:80vw;
     }
 }
